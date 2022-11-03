@@ -5,36 +5,90 @@
 	"mappings": {
 		"dynamic": false,
 		"fields": {
-			"author": {
-				"fields": {
-					"name": {
-						"type": "stringFacet"
-					}
-				},
-				"type": "document"
-			},
-			"notes": [{
-					"type": "string"
+		  "author": {
+			"fields": {
+			  "name": [
+				{
+				  "dynamic": true,
+				  "type": "document"
 				},
 				{
-					"type": "autocomplete"
+				  "type": "string"
+				},
+				{
+				  "type": "stringFacet"
 				}
-			],
-			"title": {
-				"type": "string"
+			  ]
 			},
-			"timeStamp": {
-				"type": "dateFacet"
+			"type": "document"
+		  },
+		  "device": [
+			{
+			  "dynamic": true,
+			  "type": "document"
 			},
-			"device": {
-				"type": "stringFacet"
+			{
+			  "type": "string"
 			},
-			"parameter": {
-				"type": "stringFacet"
-			},
-			"violationType": {
-				"type": "stringFacet"
+			{
+			  "type": "stringFacet"
 			}
+		  ],
+		  "notes": [
+			{
+			  "dynamic": true,
+			  "type": "document"
+			},
+			{
+			  "type": "string"
+			},
+			{
+			  "type": "autocomplete"
+			}
+		  ],
+		  "parameter": [
+			{
+			  "dynamic": true,
+			  "type": "document"
+			},
+			{
+			  "type": "string"
+			},
+			{
+			  "type": "stringFacet"
+			}
+		  ],
+		  "timeStamp": [
+			{
+			  "dynamic": true,
+			  "type": "document"
+			},
+			{
+			  "type": "dateFacet"
+			}
+		  ],
+		  "title": [
+			{
+			  "dynamic": true,
+			  "type": "document"
+			},
+			{
+			  "type": "string"
+			},
+			{
+			  "type": "autocomplete"
+			}
+		  ],
+		  "violationType": [
+			{
+			  "dynamic": true,
+			  "type": "document"
+			},
+			{
+			  "type": "stringFacet"
+			}
+		  ]
 		}
-	}
+	  },
+	  "storedSource": true
 }
